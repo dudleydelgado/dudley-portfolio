@@ -1,0 +1,20 @@
+/*Epilogue Titles.....................................*/
+  @font-face {
+    font-family: 'Epilogue-Black';
+    src: url(../assets/fonts/otf-epilogue/Epilogue-Black.otf);
+  }
+  @font-face {
+    font-family: 'Epilogue-Medium';
+    src: url(../assets/fonts/otf-epilogue/Epilogue-Medium.otf);
+  }
+
+/*Space-Grotesk paragraph.........................*/
+  
+  @font-face {
+    font-family: 'Space-Grotesk';
+    src: url(../assets/fonts/OTF/SpaceGrotesk-Bold.otf);
+  }
+  @font-face {
+    font-family: 'Space-Grotesk-medium';
+    src: url(../assets/fonts/OTF/SpaceGrotesk-Medium.otf);
+  }
