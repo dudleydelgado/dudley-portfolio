@@ -16,7 +16,11 @@
                 <div class="logo">
                     <p class="logo__dudley">Dudley</p>
                 </div>
-                <span><i class="fa-solid fa-bars menuContainer__icon"></i></span>
+                <div class="menu-bars">
+                    <span class="line1__bars-menu"></span>
+                    <span class="line2__bars-menu"></span>
+                    <span class="line3__bars-menu"></span>
+                </div>
                 <div class="menuContainer inactive">
                     <ul class="menuContainer__list">
                         <li class="menuContainer__elements"><a href="#" class="menuContainer__link">About</a></li>
@@ -40,7 +44,7 @@
         <section class="presentation">
             <h1 class="presentation__title">Dudley Delgado</h1>
             <h2 class="presentation__subtitle">Frontend Developer</h2>
-            <p class="presentation__paragraph">Mi pasión es construir código para aportar<br/> soluciones</p>
+            <p class="presentation__paragraph">Mi pasión es construir código para aportar<br> soluciones</p>
             <div class="presentation__shape"></div>
             <div class="buttonContainer">
                 <a href="#" class="button button--presentation">Contactame<i class="fa-solid fa-caret-right button__icon"></i></a>
@@ -96,23 +100,48 @@
             </div>
             <div class="skill-technologies">
                 <div class="skill-icons">
-                    <div class="skill-icons__elements">
-                        <i class="fa-brands fa-git-alt"></i>
-                    </div>
-                    <div class="skill-icons__elements">
+                    <div class="skill-icons__elements popUp__technologies popUp__technologies--html">
                         <i class="fa-brands fa-html5"></i>
+<!--                         <div class="popUp__technologies"></div> -->
                     </div>
-                    <div class="skill-icons__elements">
+                    <div class="skill-icons__elements popUp__technologies popUp__technologies--css">
                         <i class="fa-brands fa-css3-alt"></i>
                     </div>
-                    <div class="skill-icons__elements">
+                    <div class="skill-icons__elements popUp__technologies popUp__technologies--javascript">
                         <i class="fa-brands fa-square-js"></i>
                     </div>
-                    <div class="skill-icons__elements">
+                    <div class="skill-icons__elements popUp__technologies popUp__technologies--react">
+                        <i class="fa-brands fa-react"></i>
+                    </div>
+                    <div class="skill-icons__elements popUp__technologies popUp__technologies--wordpress">
                         <i class="fa-brands fa-wordpress"></i>
                     </div>
-                    <div class="skill-icons__elements">
-                        <i class="fa-brands fa-react"></i>
+                    <div class="skill-icons__elements popUp__technologies popUp__technologies--seo">
+                        <img src="./assets/icons/seo-icono-page-icon.png" alt="" class="skill__icons--img">
+                    </div>
+                </div>
+            </div>
+
+            <div class="skill-tools">
+                <div class="skill-icons">
+                    <div class="skill-icons__elements popUp__technologies popUp__technologies--git">
+                        <i class="fa-brands fa-git-alt"></i>
+    <!--                         <div class="popUp__technologies"></div> -->
+                    </div>
+                    <div class="skill-icons__elements popUp__technologies popUp__technologies--github">
+                        <i class="fa-brands fa-github"></i>
+                    </div>
+                    <div class="skill-icons__elements popUp__technologies popUp__technologies--figma">
+                        <i class="fa-brands fa-figma"></i>
+                    </div>
+                    <div class="skill-icons__elements popUp__technologies popUp__technologies--woocommerce">
+                        <img src="./assets/icons/woocommerce-icono.png" alt="" class="skill__icons--img">
+                    </div>
+                    <div class="skill-icons__elements popUp__technologies popUp__technologies--analytics">
+                        <img src="./assets/icons/analitycs-icono.png" alt="" class="skill__icons--img">
+                    </div>
+                    <div class="skill-icons__elements popUp__technologies popUp__technologies--search-console">
+                        <img src="./assets/icons/search-soncole-icono.png" alt="" class="skill__icons--img">
                     </div>
                 </div>
             </div>
@@ -122,12 +151,12 @@
             <h2 class="section-titles">Proyectos</h2>
             <div class="projects-container">
                 <div class="project-box">
-                    <img src="./assets/img/sunnyside-project-frontendmentor.jpg" alt="" class="project-box__img">
-                    <h2 class="project-box__subtitle">test title</h2>
+                    <a href="https://dudleydelgado.github.io/to-do-list/" target="_blank"><img src="./assets/img/to-do-list-project.png" alt="" class="project-box__img"></a>
+                    <h2 class="project-box__subtitle">To Do List</h2>
                     <p class="project-box__paragraph">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis tempore deleniti sequi debitis quam asperiores! Libero quasi a veniam, dolore eum dolores error non, excepturi, eveniet sequi asperiores illo ex!</p>
                             <div class="project-box__code">
-                            <a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
-                            <a href="#"><i class="fa-brands fa-github"></i></a>
+                            <a href="https://dudleydelgado.github.io/to-do-list/" target="_blank"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                            <a href="https://github.com/dudleydelgado/to-do-list" target="_blank"><i class="fa-brands fa-github"></i></a>
                         </div>
                     <div class="category-technologies">
                         <small>Html</small>
@@ -137,12 +166,12 @@
                     </div>
                 </div>
                 <div class="project-box">
-                    <img src="./assets/img/sunnyside-project-frontendmentor.jpg" alt="" class="project-box__img">
-                    <h2 class="project-box__subtitle">test title</h2>
+                    <a href="https://dudleydelgado.github.io/wordle-game/" target="_blank"><img src="./assets/img/wordle-game-clone.png" alt="" class="project-box__img"></a>
+                    <h2 class="project-box__subtitle">Wordle Game</h2>
                     <p class="project-box__paragraph">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis tempore deleniti sequi debitis quam asperiores! Libero quasi a veniam, dolore eum dolores error non, excepturi, eveniet sequi asperiores illo ex!</p>
                             <div class="project-box__code">
-                            <a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
-                            <a href="#"><i class="fa-brands fa-github"></i></a>
+                            <a href="https://dudleydelgado.github.io/wordle-game/" target="_blank"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                            <a href="https://github.com/dudleydelgado/wordle-game" target="_blank"><i class="fa-brands fa-github"></i></a>
                         </div>
                     <div class="category-technologies">
                         <small>Html</small>
@@ -152,33 +181,16 @@
                     </div>
                 </div>
                 <div class="project-box">
-                    <img src="./assets/img/sunnyside-project-frontendmentor.jpg" alt="" class="project-box__img">
-                    <h2 class="project-box__subtitle">test title</h2>
+                    <a href="https://dudleydelgado.github.io/faq-accordion-card-challenge/" target="_blank"><img src="./assets/img/faq-accordeon-challenge.png" alt="" class="project-box__img"></a>
+                    <h2 class="project-box__subtitle">Accordion</h2>
                     <p class="project-box__paragraph">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis tempore deleniti sequi debitis quam asperiores! Libero quasi a veniam, dolore eum dolores error non, excepturi, eveniet sequi asperiores illo ex!</p>
                             <div class="project-box__code">
-                            <a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
-                            <a href="#"><i class="fa-brands fa-github"></i></a>
+                            <a href="https://dudleydelgado.github.io/faq-accordion-card-challenge/" target="_blank"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                            <a href="https://github.com/dudleydelgado/faq-accordion-card-challenge" target="_blank"><i class="fa-brands fa-github"></i></a>
                         </div>
                     <div class="category-technologies">
                         <small>Html</small>
                         <small>Css</small>
-                        <small>JavaScript</small>
-    
-                    </div>
-                </div>
-                <div class="project-box">
-                    <img src="./assets/img/sunnyside-project-frontendmentor.jpg" alt="" class="project-box__img">
-                    <h2 class="project-box__subtitle">test title</h2>
-                    <p class="project-box__paragraph">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis tempore deleniti sequi debitis quam asperiores! Libero quasi a veniam, dolore eum dolores error non, excepturi, eveniet sequi asperiores illo ex!</p>
-                            <div class="project-box__code">
-                            <a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
-                            <a href="#"><i class="fa-brands fa-github"></i></a>
-                        </div>
-                    <div class="category-technologies">
-                        <small>Html</small>
-                        <small>Css</small>
-                        <small>JavaScript</small>
-    
                     </div>
                 </div>
             </div>
@@ -194,11 +206,14 @@
                     <p class="contact-details__information">Bizkaia - España</p>
                 </div>
                 <div class="contact-form">
-                    <form class="form" action="">
-                        <input class="form__fields form__fields--input" type="text" placeholder="Nombre" required>
-                        <input class="form__fields form__fields--input" type="text" placeholder="Como puedo contactarte" required>
-                        <textarea class="form__fields" name="" id="" cols="30" rows="10" maxlength="100" minlength="20" placeholder="Mensaje" required></textarea>
+                    <form class="form" action="https://formsubmit.co/edb6e340be7cf607569f9a5ea9c1c12b" method="POST">
+                        <input class="form__fields form__fields--input" type="text" name="name" placeholder="Nombre" required>
+                        <input class="form__fields form__fields--input" type="text" name="contact" placeholder="Como puedo contactarte" required>
+                        <textarea class="form__fields" name="message" id="message" cols="30" rows="10" maxlength="100" minlength="20" placeholder="Mensaje" required></textarea>
                         <button class="button" type="submit">Enviar<i class="fa-solid fa-caret-right button__icon"></i></button>
+
+                        <input type="hidden" name="_next" value="http://127.0.0.1:5500/">
+                        <input type="hidden" name="_captcha" value="false">
                     </form>
                 </div>
             </div>

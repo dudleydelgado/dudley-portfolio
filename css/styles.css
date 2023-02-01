@@ -49,11 +49,11 @@ body{
     animation: typing 3s steps(38) 1s 1 normal both, blink 1s steps(1) infinite;
 }
 
-.menuContainer__icon{
+/* .menuContainer__icon{
   color: var(--light-color);
   font-size: 2rem;
   cursor: pointer;
-}
+} */
 
 .menuContainer{
   position: absolute;
@@ -63,6 +63,46 @@ body{
   width: 100%;
   height: 300px;
 }
+
+
+.menu-bars{
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  right: 30px;
+  cursor: pointer;
+}
+
+.menu-bars span {
+  display: block;
+  width: 100%;
+  height: 2px;
+  background: var(--light-color);
+  margin-top: 6px;
+  transform-origin: 0px 100%;
+  transition: all 300ms;
+}
+
+.activeline1__bars-menu{
+  transform: rotate(45deg) translate(-2px, 1px); 
+}
+
+.activeline2__bars-menu{
+  opacity: 0;
+  margin-left: -30px; 
+}
+
+.activeline3__bars-menu{
+  transform: rotate(-45deg) translate(-4px, 2px);
+}
+
+/* .menuContainer__icon--close{
+  display: none;
+  position: absolute;
+  right: 42px;
+  font-size: 2rem;
+}
+ */
 
 .menuContainer__list{
   display: flex;
@@ -84,10 +124,6 @@ body{
   color: var(--dark-color);
   font-size: 2.5rem;
   margin-top: 10px;
-}
-
-.inactive{
-  display: none;
 }
 
 .main{
@@ -135,6 +171,12 @@ body{
   border-radius: 10px;
   font-size: 1.2rem;
   cursor: pointer;
+}
+
+.button:hover{
+  background-color: rgb(39 39 42/var(--color-bg-opacity));
+  color: var(--light-color);
+  border: 1px solid var(--light-color);
 }
 
 .button__icon{
@@ -238,12 +280,36 @@ body{
   display: flex;
   justify-content: center;
   margin-top: 60px;
+  position: relative;
+}
+
+.skill-technologies::before{
+  content: 'Conocimientos';
+  position: absolute;
+  text-align: center;
+  font-size: 2rem;
+  color: rgb(23 23 23/var(--color-bg-opacity));
+}
+
+.skill-tools{
+  display: flex;
+  justify-content: center;
+  margin-top: 60px;
+}
+
+.skill-tools::before{
+  content: 'Herramientas';
+  position: absolute;
+  text-align: center;
+  font-size: 2rem;
+  color: rgb(23 23 23/var(--color-bg-opacity));
 }
 
 .skill-icons{
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 30px;
+  margin-top: 70px;
 }
 
 .skill-icons__elements{
@@ -259,6 +325,10 @@ body{
 .skill-icons__elements i{
   color: var(--light-color);
   font-size: 3.5rem;
+}
+
+.skill__icons--img{
+  width: 62px;
 }
 
 /*Section projects................................................*/
@@ -371,6 +441,14 @@ body{
 .form__fields--input{
   height: 60px;
 }
+
+.form__fields:focus{
+  border: 1px solid var(--violet-color);
+}
+
+textarea:focus, input:focus, input[type]:focus {
+  outline: 0 none;
+}
 /*Footer section ...............................................*/
 
 .footer{
@@ -403,13 +481,22 @@ body{
   text-align: center;
 }
 
+.inactive{
+  display: none;
+}
 
 @media (min-width: 1200px){
 
   .nav{
-    position: fixed;
-    width: 100%;
     box-shadow: 2px 2px 2px 2px rgba(0,0,0,0.75);
+  }
+
+  .inactive{
+    display: block;
+  }
+
+  .menu-bars{
+    display: none;
   }
   
   .menu{
@@ -417,10 +504,6 @@ body{
       justify-content: space-around;
       padding: 40px 0px;
       position: static;
-  }
-  
-  span .menuContainer__icon{
-    display: none;
   }
   
   .menuContainer{
@@ -442,14 +525,32 @@ body{
   
   .menuContainer__link{
     color: var(--light-color);
+    position: relative;
+    padding-bottom: 2px;
+  }
+
+  .menuContainer__link::before{
+    content: "";
+    display: block;
+    width: 0;
+    height: 2px;
+    background-color: var(--violet-color);
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    transition: all .5s;
+  }
+
+  .menuContainer__link:hover::before{
+    width: 100%;
+  }
+
+  .menuContainer__link:focus{
+    color: var(--violet-color);
   }
   
   .social-rrss{
     display: none;
-  }
-
-  .inactive{
-    display: flex;
   }
 
   .presentation{
@@ -551,6 +652,7 @@ body{
   'details boxes'
   'detailsTitle boxes'
   'technolgoies technolgoies'
+  'tools tools'
   ;
   justify-content: space-evenly;
   gap: 20px;
@@ -573,6 +675,13 @@ body{
   grid-area: technolgoies;
 }
 
+.skill-tools{
+  grid-area: tools;
+  position: relative;
+}
+
+
+
 .skill-box{
   max-width: 400px;
   min-height: 280px;
@@ -581,20 +690,125 @@ body{
 .skill-icons{
   grid-template-columns: repeat(6, 1fr);
   gap: 100px;
-  margin-top: 50px;
+  margin-top: 70px;
+}
+
+.skill__icons--img{
+  filter: brightness(.2);
+}
+
+.skill-icons__elements{
+  border: 2px solid rgb(39 39 42/var(--color-bg-opacity));
+  border-radius: 50%;
+  width: 90px;
+  height: 90px;
+  color: var(--violet-color);
+  font-size: 3.5rem;
+  position: relative;
+}
+
+.skill-icons__elements:hover{
+    background-color: var(--light-color);
+}
+
+.popUp__technologies::before{
+  content: '';
+  font-size: .9rem;
+  text-align: center;
+  margin: auto;
+  color: var(--dark-color);
+  border-radius: 5px;
+  position: absolute;
+  background-color: var(--light-color);
+  width: auto;
+  height: 20px;
+  bottom: 100px;
+  padding: 0 5px;
+  opacity: 0;
+}
+
+.popUp__technologies:hover::before{
+  opacity: 1;
+}
+
+.popUp__technologies--git::before{
+  content: 'GIT';
+}
+
+.popUp__technologies--html::before{
+  content: 'HTML5';
+}
+
+.popUp__technologies--css::before{
+  content: 'CSS3';
+}
+
+.popUp__technologies--javascript::before{
+  content: 'JAVASCRIPT';
+}
+
+.popUp__technologies--wordpress::before{
+  content: 'WORDPRESS';
+}
+
+.popUp__technologies--react::before{
+  content: 'REACT';
+}
+
+.popUp__technologies--seo::before{
+  content: 'SEO';
+}
+
+.popUp__technologies--github::before{
+  content: 'GITHUB';
+}
+
+.popUp__technologies--figma::before{
+  content: 'FIGMA';
+}
+
+.popUp__technologies--woocommerce::before{
+  content: 'WOOCOMMERCE';
+}
+
+.popUp__technologies--analytics::before{
+  content: 'GOOGLE_ANALITYCS';
+}
+
+.popUp__technologies--search-console::before{
+  content: 'SEARCH_CONSOLE';
+}
+
+
+.skill-icons__elements i{
+  color: rgb(39 39 42/var(--color-bg-opacity));
 }
 
 /*Section projects..............................................................................*/
 
 .projects-container{
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(3, 1fr);
   gap: 10px;
 }
 
 .project-box__paragraph{
   padding: 10px 20px 10px 20px;
   font-size: .8rem;
+}
+
+.project-box__img{
+  min-height: 300px;
+  max-height: 300px;
+  object-fit: cover;
+  cursor: pointer;
+}
+
+.project-box__img:hover{
+  transform: scale(1.2);
+  transition: 2s;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
 }
 
 /*Contacto section......................................................................*/
@@ -611,6 +825,9 @@ body{
 .contact-form{
   min-width: 600px;
 }
+
+
+/*Footer section...............................*/
 
 .footer{
   display: grid;
