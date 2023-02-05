@@ -391,6 +391,34 @@ body{
   border-bottom-right-radius: 5px;
 }
 
+.section-titles--moreProjects{
+  margin-top: 100px;
+}
+
+.more-projectsContainer{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 100px;
+  margin-top: 100px;
+}
+
+.skill-box--moreProjects{
+  width: 90%;
+  margin: auto;
+  min-height: auto;
+}
+
+.category-technologies--moreProjects{
+  background-color: transparent;
+  padding: 0;
+}
+
+.skill-box__icon--moreProjects{
+  font-size: 1.2rem;
+  margin-top: 20px;
+}
+
 
 /*Contact Me section..............................................................*/
 
@@ -811,6 +839,17 @@ textarea:focus, input:focus, input[type]:focus {
   border-bottom-right-radius: 5px;
 }
 
+.more-projectsContainer{
+  flex-direction: row;
+}
+
+.skill-box--moreProjects{
+  width: auto;
+  margin: initial;
+  min-height: auto;
+  gap: 100px;
+}
+
 /*Contacto section......................................................................*/
 
 .contactme-container{
@@ -850,9 +889,6 @@ textarea:focus, input:focus, input[type]:focus {
 .copyright{
   grid-area: copyright;
 }
-
-}
-
 
   @keyframes typing {
     from {
