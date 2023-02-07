@@ -210,6 +210,18 @@ body{
   margin-bottom: 40px;
 }
 
+.about-me__title-span{
+  position: relative;
+}
+
+.about-me__title-span::before{
+  content: '';
+  position: absolute;
+  border: 1px solid var(--violet-color);
+  width: 100%;
+  bottom: 0;
+}
+
 .about-me-img{
   display: none;
 }
@@ -888,6 +900,8 @@ textarea:focus, input:focus, input[type]:focus {
 
 .copyright{
   grid-area: copyright;
+}
+
 }
 
   @keyframes typing {
