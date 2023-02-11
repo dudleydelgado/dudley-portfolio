@@ -64,7 +64,6 @@ body{
   height: 300px;
 }
 
-
 .menu-bars{
   width: 30px;
   height: 30px;
@@ -148,14 +147,16 @@ body{
 
 .presentation__shape{
   background-color: transparent;
-  max-width: 350px;
-  height: 350px;
-  border-radius: 50% 50% 50% 50% / 30% 32% 68% 70%;
-  background-image: url('https://i.pinimg.com/564x/d7/07/03/d707038ea5baaef10199b7d47135f840.jpg');
-  background-position: center;
-  background-size: 350px;
+  max-width: 300px;
+  height: 450px;
+  border-radius: 88% 88% 100% 100% / 50% 50% 52% 52%;
+  background-image: url(../assets/img/dudley-delgado-hero.jpg);
+  background-size: cover;
   background-repeat: no-repeat;
   margin: auto;
+  border-bottom: 6px solid rgb(39 39 42/var(--color-bg-opacity));
+  border-right: 6px solid rgb(39 39 42/var(--color-bg-opacity));
+  box-shadow: 5px 5px 5px 0px rgba(0,0,0,0.75);
 }
 
 .buttonContainer{
@@ -233,7 +234,7 @@ body{
 }
 
 .button--download-cv{
-  margin-top: 80px;
+  margin-top: 50px;
 }
 
 /*Skills section........................................................*/
@@ -525,6 +526,24 @@ textarea:focus, input:focus, input[type]:focus {
   display: none;
 }
 
+.btn__scrollTop{
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: rgb(39 39 42/var(--color-bg-opacity));
+  color: var(--violet-color);
+  padding: 10px 15px;
+  border: 1px solid var(--violet-color);
+  border-radius: 10%;
+  cursor: pointer;
+  transform: translateY(100px);
+  transition: .3s;
+}
+
+.btn__scrollOn{
+  transform: translateY(0);
+}
+
 @media (min-width: 1200px){
 
   .nav{
@@ -627,7 +646,7 @@ textarea:focus, input:focus, input[type]:focus {
 
   .buttonContainer{
     text-align: left;
-    margin: 0;
+    margin: 80px 0;
   }
 
   .button--presentation{
@@ -647,11 +666,11 @@ textarea:focus, input:focus, input[type]:focus {
   }
 
   .presentation__shape{
-    min-width: 500px;
-    min-height: 500px;
-    background-size: 500px;
+    min-width: 400px;
+    min-height: 600px;
     grid-area: img;
     margin-right: 0;
+    position: relative;
 }
 
 .about-me__container{
@@ -670,6 +689,9 @@ textarea:focus, input:focus, input[type]:focus {
 .about-me-img__image{
   max-width: 500px;
   border-radius: 10px;
+  border-bottom: 6px solid rgb(39 39 42/var(--color-bg-opacity));
+  border-right: 6px solid rgb(39 39 42/var(--color-bg-opacity));
+  box-shadow: 5px 5px 5px 0px rgba(0,0,0,0.75);
 }
 
 .about-me-text{
@@ -682,7 +704,7 @@ textarea:focus, input:focus, input[type]:focus {
 }
 
 .button--download-cv{
-  margin-top: 80px;
+  margin-top: 10px;
   font-size: 1.2rem;
 }
 
