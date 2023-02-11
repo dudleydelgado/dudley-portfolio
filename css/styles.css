@@ -544,6 +544,38 @@ textarea:focus, input:focus, input[type]:focus {
   transform: translateY(0);
 }
 
+/*THANK-YOU PAGE..................................*/
+
+.main-thankYou{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.presentation__title--thankYou{
+  font-size: 3rem;
+  margin-bottom: 20px;
+}
+
+.presentation__subtitle--thankYou{
+  font-size: 1.6rem;
+  font-family: var(--font-family-paragraph);
+}
+
+.presentation__thankYou--span{
+  position: relative;
+}
+
+.presentation__thankYou--span::before{
+  content: '';
+  position: absolute;
+  border: 1px solid var(--violet-color);
+  width: 100%;
+  bottom: 0;
+}
+
 @media (min-width: 1200px){
 
   .nav{
@@ -629,13 +661,13 @@ textarea:focus, input:focus, input[type]:focus {
 
   .presentation__title{
     text-align: left;
-    font-size: 5rem;
+    font-size: 4rem;
     grid-area: title;
   }
   
   .presentation__subtitle{
     text-align: left;
-    font-size: 1.8rem;
+    font-size: 1.6rem;
     grid-area: subtitle;
   }
 
