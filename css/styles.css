@@ -861,8 +861,8 @@ textarea:focus, input:focus, input[type]:focus {
   content: 'FIGMA';
 }
 
-.popUp__technologies--woocommerce::before{
-  content: 'WOOCOMMERCE';
+.popUp__technologies--sass::before{
+  content: 'SASS';
 }
 
 .popUp__technologies--analytics::before{
