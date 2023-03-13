@@ -8,7 +8,20 @@ let lineBarsOne = document.querySelector(".line1__bars-menu");
 let lineBarsTwo = document.querySelector(".line2__bars-menu");
 let lineBarsThree = document.querySelector(".line3__bars-menu");
 //Scroll arrow-Up
-const btnScroll = document.getElementById('btn__scrollTop')
+const btnScroll = document.getElementById('btn__scrollTop');
+//Modal
+document.querySelectorAll(".modal__container img").forEach(el=>{
+  el.addEventListener("click", function(ev){
+    ev.stopPropagation();
+    this.parentNode.classList.add("active");
+  })
+})
+
+document.querySelectorAll(".modal__container").forEach(el=>{
+  el.addEventListener("click", function(ev){
+    this.classList.remove("active");
+  })
+})
 
 window.onscroll = () => {
     add_btn_scrolltop()

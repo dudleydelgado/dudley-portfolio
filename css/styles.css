@@ -432,6 +432,70 @@ body{
   margin-top: 20px;
 }
 
+/*Section modal gallery...........................................................*/
+
+.preview__appsTitle{
+  text-align: center;
+  font-size: 2rem;
+}
+
+.img__gallery{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 50px;
+  margin-top: 100px;
+}
+
+.gallery__title{
+  display: none;
+}
+
+.modal__container{
+  display: inline-block;
+  position: relative;
+  margin: auto;
+}
+
+.modal__container.active{
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  top: 0;
+  left: 0;
+  overflow-y: scroll;
+  z-index: 99;
+}
+
+.modal__container img{
+  z-index: 1;
+  width: 400px;
+  border-radius: 10px;
+  box-shadow: 5px 5px 5px 0px rgba(0,0,0,0.75);
+  cursor: pointer;
+  min-height: 280px;
+  max-height: 280px;
+}
+
+.modal__container.active img{
+  width: 700px;
+  max-height: 100%;
+  margin-top: 100px;
+}
+
+.modal__container.active::after{
+  content: "";
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  background-color: rgba(0,0,0,0.70);
+  z-index: 0;
+}
 
 /*Contact Me section..............................................................*/
 
@@ -916,6 +980,25 @@ textarea:focus, input:focus, input[type]:focus {
   gap: 100px;
 }
 
+/*Gallery section......................................................................*/
+
+.img__gallery{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  gap: 0px;
+}
+
+.gallery__title{
+  display: block;
+  margin-left: 5px;
+  margin-bottom: 20px;
+  font-size: 1.4rem;
+}
+
+.preview__appsTitle{
+  display: none;
+}
 /*Contacto section......................................................................*/
 
 .contactme-container{
